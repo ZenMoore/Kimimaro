@@ -1,2 +1,2 @@
 # Zol
-A Zip-unzip Application.
+A Zip-unzip Application.Console Application.
