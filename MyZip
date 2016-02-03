@@ -1,0 +1,40 @@
+import java.util.zip.*;
+import java.io.*;
+public class MyZip{
+	private void zip(String zipFileName,File inputFile)throws Exception{
+		ZipOutputStream out=new ZipOutputStream(new FileOutputStream(zipFileName));
+		if(inputFile.isDirectory())
+			zip(out,inputFile.listFiles(),"");
+		else
+			zip(out,new File[]{inputFile},"");
+		System.out.println("Zipping");
+		out.close();
+	}
+	private void zip(ZipOutputStream out,File[] files,String base)throws Exception {
+			if(files!=null){
+				for(File currentFile:files){
+					if(currentFile.isDirectory()){
+						zip(out,currentFile.listFiles(),currentFile.getName()+File.separator);
+						continue;
+					}
+					out.putNextEntry(new ZipEntry(base+currentFile.getName()));
+					FileInputStream in=new FileInputStream(currentFile);
+					int len=0;
+					byte byt[]=new byte[1024];
+					while((len=in.read(byt))!=-1){
+						out.write(byt);
+					}
+				}
+		}
+	}
+	public static void main(String[] args){
+		
+		MyZip book=new MyZip();
+		try{
+			book.zip("E:/L.zip", new File("E:/L"));
+			System.out.println("Success.");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
