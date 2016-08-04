@@ -35,7 +35,7 @@ public class Main extends JFrame{
     };
 
     public Main(){
-        super("Zol");
+        super("Kimimaro.");
 
         this.setallPanel();
         this.setSourceField();
