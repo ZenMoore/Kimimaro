@@ -11,7 +11,7 @@
 ![](https://github.com/ZenMoore/Kimimaro/raw/master/image/back5.gif)
 
 #### Crack: 
-* Won't produce needless branched.<br>
+* Won't produce needless branches.<br>
 
   `Download Website: ` [Kimimaro.sourceforge](http://www.kimimaro.sourceforge.net "悬停显示")<br>
   `Personal Sina Weibo: ` [ZenMoore.sinaweibo](http://weibo.com/JavcMak "悬停显示")
